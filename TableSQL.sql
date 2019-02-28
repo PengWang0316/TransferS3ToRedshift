@@ -1,0 +1,10 @@
+CREATE TABLE test (
+	TimeStamp TIMESTAMP,
+  	A VARCHAR(255),
+    B VARCHAR(255),
+    C VARCHAR(255),
+    D VARCHAR(255),
+    E VARCHAR(255),
+    F VARCHAR(255),
+    G VARCHAR(255)
+);
