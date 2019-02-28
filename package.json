@@ -1,0 +1,43 @@
+{
+  "name": "s3-to-redshif",
+  "version": "1.0.0",
+  "description": "The microservice for transferring file from S3 to Redshift.",
+  "main": "index.js",
+  "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "unitTest": "jest  __tests__/unit_tests/*",
+    "unitTestWatch": "jest  __tests__/unit_tests/* --watch",
+    "unitTestCoverage": "jest  __tests__/unit_tests/* --coverage",
+    "integrationTest": "env AWS_XRAY_CONTEXT_MISSING=LOG_ERROR TEST_MODE=integration jest __tests__/test_cases/* --forceExit",
+    "acceptanceTest": "env TEST_MODE=acceptance TEST_ROOT=https://9p4s43slt2.execute-api.us-west-2.amazonaws.com/dev jest __tests__/test_cases/*"
+  },
+  "author": "Kevin W.",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "__tests__/helpers/",
+      "__tests__/debug_events/"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/runtime": "^7.2.0",
+    "aws-sdk": "^2.388.0",
+    "aws-xray-sdk": "^2.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "coveralls": "^3.0.2",
+    "dotenv": "^6.1.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.3",
+    "jest": "^23.6.0",
+    "serverless": "^1.36.1"
+  }
+}
