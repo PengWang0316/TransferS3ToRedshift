@@ -32,4 +32,14 @@ describe('get-records', () => {
     expect(result[1][0].Data).not.toBeUndefined();
     expect(result[1][0].Data).not.toBeNull();
   });
+
+  test('500 records', () => {
+    // Slice 501 because we have an empty line in the end of the fakeArray
+    const result = getRecords([...fakeContentArray, ...fakeContentArray].slice(0, 501));
+
+    expect(result.length).toBe(1);
+    expect(result[0].length).toBe(500);
+    expect(result[0][0].Data).not.toBeUndefined();
+    expect(result[0][0].Data).not.toBeNull();
+  });
 });
