@@ -1,5 +1,5 @@
 CREATE TABLE test (
-	TimeStamp TIMESTAMP,
+	  TimeStamp VARCHAR(50),
   	A VARCHAR(255),
     B VARCHAR(255),
     C VARCHAR(255),
