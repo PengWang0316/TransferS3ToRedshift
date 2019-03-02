@@ -3,5 +3,5 @@ node_js:
   - "11"
 before_install:
   - export TZ=Canada/Pacific
-script: npm run testCoverage
+script: npm run unitTestCoverage
 after_success: 'npm run coveralls'
